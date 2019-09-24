@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="card card-1">
+            <h3>{{ product.name }}</h3>
+            <p>Цена: <b>{{ product.price }}</b></p>
+            <p>Описание: <b>{{ product.description }}</b></p>
+            <p>Остаток: <b>{{ product.balance }}</b></p>
+            <p>Категория: <b>{{ category }}</b></p>
+        </div>
+    </div>
+{% endblock %}
