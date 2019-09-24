@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
+{% block title %}
+    Создание товара
+{% endblock %}
 {% block content %}
-<div class="container mt-5">
-    <form action="{% url 'product_create_url' %}" method="post">
-    {% include 'partial/product_create_form.html' with button_text='Создать' %}
-    </form>
-</div>
+    <div class="container mt-5">
+        <form action="{% url 'product_create_url' %}" method="post">
+            {% include 'partial/product_create_form.html' with button_text='Создать' %}
+        </form>
+    </div>
 {% endblock %}

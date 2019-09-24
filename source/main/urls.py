@@ -23,6 +23,6 @@ urlpatterns = [
     path('details/<int:pk>', details_page, name='details_url'),
     path('create/', product_create, name='product_create_url'),
     path('edit/<int:pk>', product_edit, name='product_edit_url'),
-    path('delete/<int:pk>', product_delete, name='product_delete_url')
+    path('delete/<int:pk>', product_delete, name='product_delete_url'),
+    path('product/<str:slug>/', cat_list, name='cat_url')
 ]
-

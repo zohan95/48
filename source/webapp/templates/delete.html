@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% block title %}
+    Удаление - {{ product.name }}
+{% endblock %}
 {% block content %}
     <div class="container text-center mt-5">
         <h1>Вы уверены, что хотите удалить запись "{{ product.name }}"?</h1>

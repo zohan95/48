@@ -1,75 +1,75 @@
 [
-{
-  "model": "webapp.product",
-  "pk": 1,
-  "fields": {
-    "name": "HP OMEN",
-    "description": "SUPER LAPTOP",
-    "category": "notebook",
-    "balance": 10,
-    "price": "75000.00"
+  {
+    "model": "webapp.product",
+    "pk": 1,
+    "fields": {
+      "name": "HP OMEN",
+      "description": "SUPER LAPTOP",
+      "category": "notebook",
+      "balance": 10,
+      "price": "75000.00"
+    }
+  },
+  {
+    "model": "webapp.product",
+    "pk": 2,
+    "fields": {
+      "name": "XIAOMI REDMI NOTE 8",
+      "description": "Super mobile phone",
+      "category": "phone",
+      "balance": 5,
+      "price": "15000.00"
+    }
+  },
+  {
+    "model": "webapp.product",
+    "pk": 3,
+    "fields": {
+      "name": "DELL",
+      "description": "super pc",
+      "category": "pc",
+      "balance": 2,
+      "price": "10000.00"
+    }
+  },
+  {
+    "model": "webapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "Server HP",
+      "description": "HP server",
+      "category": "other",
+      "balance": 1,
+      "price": "99999.00"
+    }
+  },
+  {
+    "model": "webapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "mi band 4",
+      "description": "",
+      "category": "other",
+      "balance": 100,
+      "price": "1400.00"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$iqeNkVZb3BYQ$Y6hpjcOxP708wRhUSOu8Fc+DZl//afSqnBW/xOLEzfM=",
+      "last_login": "2019-09-24T03:33:42.325Z",
+      "is_superuser": true,
+      "username": "root",
+      "first_name": "",
+      "last_name": "",
+      "email": "asd@asd.sd",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-09-24T03:12:44.858Z",
+      "groups": [],
+      "user_permissions": []
+    }
   }
-},
-{
-  "model": "webapp.product",
-  "pk": 2,
-  "fields": {
-    "name": "XIAOMI REDMI NOTE 8",
-    "description": "Super mobile phone",
-    "category": "phone",
-    "balance": 5,
-    "price": "15000.00"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 3,
-  "fields": {
-    "name": "DELL",
-    "description": "super pc",
-    "category": "pc",
-    "balance": 2,
-    "price": "10000.00"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 4,
-  "fields": {
-    "name": "Server HP",
-    "description": "HP server",
-    "category": "other",
-    "balance": 1,
-    "price": "99999.00"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 5,
-  "fields": {
-    "name": "mi band 4",
-    "description": "",
-    "category": "other",
-    "balance": 100,
-    "price": "1400.00"
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$150000$iqeNkVZb3BYQ$Y6hpjcOxP708wRhUSOu8Fc+DZl//afSqnBW/xOLEzfM=",
-    "last_login": "2019-09-24T03:33:42.325Z",
-    "is_superuser": true,
-    "username": "root",
-    "first_name": "",
-    "last_name": "",
-    "email": "asd@asd.sd",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2019-09-24T03:12:44.858Z",
-    "groups": [],
-    "user_permissions": []
-  }
-}
 ]

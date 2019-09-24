@@ -1,42 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="text-center mt-5" xmlns="http://www.w3.org/1999/html">
-        <form action="{% url 'main_url' %}" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <button type="submit" class="btn btn-outline-info">Поиск</button>
-        </form>
-    </div>
-    <form action="{% url 'main_url' %}" method="post">
-        {% csrf_token %}
-        <div class="container mt-5">
-            <div class="row">
-                {% for i in products %}
-                    <div class="col-sm-4 my-2">
-                        <div class="card card-1 ">
-                            <div id="question_text_{{ i.pk }}">
-                                <div class="card-body">
-                                    <p class="card-text">{{ i.name }}</p>
-                                    <hr>
-                                    <p class="card-text">{{ i.price }}</p>
-                                    <hr>
-                                    {% for j in choices %}
-                                        {% if i.category in j %}
-                                            <p class="card-text">Категория: {{ j.1 }}</p>
-                                        {% endif %}
-                                    {% endfor %}
-                                    <a href="{% url 'details_url' i.pk %}" class="btn btn-primary">Детали</a>
-                                    <a href="{% url 'product_edit_url' i.pk%}" class="btn btn-success">Изменить</a>
-                                    <a href="{% url 'product_delete_url' i.pk %}" class="btn btn-danger">Х</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="plus-button">
-            <a href="{% url 'product_create_url' %}" class="text-decoration-none">+</a>
-        </div>
-    </form>
+    {% if slug %}
+        {% include 'partial/cats.html' %}
+        {% include 'partial/main.html' %}
+    {% else %}
+        {% include 'partial/nocats.html' %}
+        {% include 'partial/main.html' %}
+    {% endif %}
 {% endblock %}

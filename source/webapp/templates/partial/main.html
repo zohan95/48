@@ -1,0 +1,34 @@
+<div class="container"><h2>{{ sel_cat }}</h2></div>
+<form action="{% url 'main_url' %}" method="post">
+    {% csrf_token %}
+    <div class="container mt-5">
+        <div class="row">
+            {% for i in products %}
+                <div class="col-sm-4 my-2">
+                    <div class="card card-1 ">
+                        <div id="question_text_{{ i.pk }}">
+                            <div class="card-body">
+                                <p class="card-text">{{ i.name }}</p>
+                                <hr>
+                                <p class="card-text">{{ i.price }}</p>
+                                <hr>
+                                {% for j in choices %}
+                                    {% if i.category in j %}
+                                        <p class="card-text">Категория: <a
+                                                href="{% url 'cat_url' slug=i.category %}">{{ j.1 }}</a></p>
+                                    {% endif %}
+                                {% endfor %}
+                                <a href="{% url 'details_url' i.pk %}" class="btn btn-primary">Детали</a>
+                                <a href="{% url 'product_edit_url' i.pk %}" class="btn btn-success">Изменить</a>
+                                <a href="{% url 'product_delete_url' i.pk %}" class="btn btn-danger">Х</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="plus-button">
+        <a href="{% url 'product_create_url' %}" class="text-decoration-none">+</a>
+    </div>
+</form>

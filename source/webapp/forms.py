@@ -3,7 +3,7 @@ from .models import Product
 
 
 class SearchForm(forms.Form):
-    search_query = forms.CharField(max_length=100, label='Search')
+    search_query = forms.CharField(max_length=100, label='Поиск')
 
 
 class ProductForm(forms.ModelForm):
