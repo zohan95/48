@@ -26,8 +26,8 @@
                                         {% endif %}
                                     {% endfor %}
                                     <a href="{% url 'details_url' i.pk %}" class="btn btn-primary">Детали</a>
-                                    <a href="" class="btn btn-success">Изменить</a>
-                                    <a href="" class="btn btn-danger">Х</a>
+                                    <a href="{% url 'product_edit_url' i.pk%}" class="btn btn-success">Изменить</a>
+                                    <a href="{% url 'product_delete_url' i.pk %}" class="btn btn-danger">Х</a>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="plus-button">
-            <a href="" class="text-decoration-none">+</a>
+            <a href="{% url 'product_create_url' %}" class="text-decoration-none">+</a>
         </div>
     </form>
 {% endblock %}
