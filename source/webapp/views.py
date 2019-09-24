@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Product, cat_choices
 from .forms import SearchForm, ProductForm
 
@@ -18,7 +18,7 @@ def main_page(request):
 
 
 def details_page(request, pk):
-    product = Product.objects.get(pk=pk)
+    product = get_object_or_404(Product, pk=pk)
     cat = product.category
     for i in cat_choices:
         if cat in i:
@@ -39,11 +39,11 @@ def product_create(request):
 
 def product_edit(request, pk):
     if request.method == "GET":
-        product = Product.objects.get(pk=pk)
+        product = get_object_or_404(Product, pk=pk)
         form = ProductForm(instance=product)
         return render(request, 'product_edit.html', {'form': form, 'pk1': pk, 'name': product.name})
     elif request.method == 'POST':
-        obj = Product.objects.get(pk=pk)
+        obj = get_object_or_404(Product, pk=pk)
         bound_from = ProductForm(request.POST, instance=obj)
         if bound_from.is_valid():
             bound_from.save()
@@ -52,7 +52,7 @@ def product_edit(request, pk):
 
 
 def product_delete(request, pk):
-    product = Product.objects.get(pk=pk)
+    product = get_object_or_404(Product, pk=pk)
     if request.method == 'GET':
         return render(request, 'delete.html', {'product': product})
     elif request.method == 'POST':
